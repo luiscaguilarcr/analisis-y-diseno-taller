@@ -1,24 +1,31 @@
 package tutorial;
 
-public class Node<T> {
-
-    private Node next = null;
-
-    private T object = null;
-
-    public Node(T object) {
-	this.object = object;
+public class Node {
+    public Object data; //objeto almacenado
+    public Node next; //apuntador al sgte nodo
+    public Node prev; //apuntador al nodo anterior
+    
+    //Constructor
+    public Node(Object data){
+        this.data = data;
+        this.next = this.prev = null;
     }
 
-    public Node<T> getNext() {
-	return next;
+    public Object getData() {
+        return data;
     }
 
-    public void setNext(Node<T> next) {
-	this.next = next;
+    public void setData(Object data) {
+        this.data = data;
     }
 
-    public T getObject() {
-	return object;
+    public Node getNext() {
+        return next;
     }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+    
+    
 }
